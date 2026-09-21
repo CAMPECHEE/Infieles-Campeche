@@ -1,314 +1,314 @@
-!DOCTYPE html
-html lang=es
-head
-meta charset=UTF-8
-meta name=viewport content=width=device-width, initial-scale=1.0
-titlePara ti 🌼title
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para ti 🌼</title>
 
-style
- { box-sizing border-box; }
+<style>
+* { box-sizing: border-box; }
 
 body {
-    margin 0;
-    min-height 100vh;
-    overflow hidden;
-    font-family Georgia, serif;
-    background #080705;
-    color white;
+    margin: 0;
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: Georgia, serif;
+    background: #080705;
+    color: white;
 }
 
 .screen {
-    position fixed;
-    inset 0;
-    display flex;
-    align-items center;
-    justify-content center;
-    flex-direction column;
-    text-align center;
-    padding 25px;
-    transition opacity 1s ease, transform 1s ease;
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 25px;
+    transition: opacity 1s ease, transform 1s ease;
 }
 
 .hidden {
-    opacity 0;
-    pointer-events none;
-    transform scale(1.05);
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(1.05);
 }
 
 #start {
-    background
+    background:
         radial-gradient(circle at center, #3b2c00 0%, #120e02 45%, #050403 100%);
 }
 
 #start h1 {
-    font-size 38px;
-    margin-bottom 10px;
-    color #ffe66b;
-    text-shadow 0 0 25px rgba(255,220,70,.5);
+    font-size: 38px;
+    margin-bottom: 10px;
+    color: #ffe66b;
+    text-shadow: 0 0 25px rgba(255,220,70,.5);
 }
 
 #start p {
-    color #d8d1bd;
-    font-size 17px;
+    color: #d8d1bd;
+    font-size: 17px;
 }
 
 button {
-    margin-top 25px;
-    padding 14px 30px;
-    border 1px solid #f5d84a;
-    border-radius 30px;
-    background rgba(255,215,60,.08);
-    color #ffe66b;
-    font-size 16px;
-    cursor pointer;
+    margin-top: 25px;
+    padding: 14px 30px;
+    border: 1px solid #f5d84a;
+    border-radius: 30px;
+    background: rgba(255,215,60,.08);
+    color: #ffe66b;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-buttonactive { transform scale(.95); }
+button:active { transform: scale(.95); }
 
 #garden {
-    background
+    background:
         radial-gradient(circle at 50% 20%, #594900 0%, #171100 35%, #050403 80%);
 }
 
 #garden h2 {
-    position absolute;
-    top 35px;
-    font-size 27px;
-    color #ffe66b;
-    opacity 0;
-    animation appear 2s forwards;
+    position: absolute;
+    top: 35px;
+    font-size: 27px;
+    color: #ffe66b;
+    opacity: 0;
+    animation: appear 2s forwards;
 }
 
 .flower {
-    position absolute;
-    font-size 55px;
-    opacity 0;
-    animation bloom 2s forwards, float 4s ease-in-out infinite;
-    filter drop-shadow(0 0 12px rgba(255,220,50,.5));
+    position: absolute;
+    font-size: 55px;
+    opacity: 0;
+    animation: bloom 2s forwards, float 4s ease-in-out infinite;
+    filter: drop-shadow(0 0 12px rgba(255,220,50,.5));
 }
 
-.f1 { left 12%; bottom 18%; animation-delay .3s; }
-.f2 { left 30%; bottom 28%; animation-delay .8s; }
-.f3 { left 48%; bottom 15%; animation-delay 1.3s; }
-.f4 { left 66%; bottom 27%; animation-delay 1.8s; }
-.f5 { left 82%; bottom 17%; animation-delay 2.3s; }
+.f1 { left: 12%; bottom: 18%; animation-delay: .3s; }
+.f2 { left: 30%; bottom: 28%; animation-delay: .8s; }
+.f3 { left: 48%; bottom: 15%; animation-delay: 1.3s; }
+.f4 { left: 66%; bottom: 27%; animation-delay: 1.8s; }
+.f5 { left: 82%; bottom: 17%; animation-delay: 2.3s; }
 
 @keyframes bloom {
-    from { opacity 0; transform scale(0) translateY(50px); }
-    to { opacity 1; transform scale(1) translateY(0); }
+    from { opacity: 0; transform: scale(0) translateY(50px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
 }
 
 @keyframes float {
-    0%,100% { margin-top 0; }
-    50% { margin-top -12px; }
+    0%,100% { margin-top: 0; }
+    50% { margin-top: -12px; }
 }
 
-@keyframes appear { to { opacity 1; } }
+@keyframes appear { to { opacity: 1; } }
 
 #message {
-    background
+    background:
         linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.65)),
         radial-gradient(circle, #514300, #0b0904 70%);
 }
 
 .letter {
-    width min(90%, 520px);
-    max-height 75vh;
-    overflow-y auto;
-    padding 30px 25px;
-    border-radius 18px;
-    background rgba(255,249,218,.97);
-    color #332b16;
-    box-shadow 0 0 40px rgba(255,220,70,.25);
-    transform translateY(40px);
-    animation letterIn 1.5s forwards;
+    width: min(90%, 520px);
+    max-height: 75vh;
+    overflow-y: auto;
+    padding: 30px 25px;
+    border-radius: 18px;
+    background: rgba(255,249,218,.97);
+    color: #332b16;
+    box-shadow: 0 0 40px rgba(255,220,70,.25);
+    transform: translateY(40px);
+    animation: letterIn 1.5s forwards;
 }
 
-@keyframes letterIn { to { transform translateY(0); } }
+@keyframes letterIn { to { transform: translateY(0); } }
 
 .letter h2 {
-    margin-top 0;
-    color #9b7700;
-    font-size 27px;
+    margin-top: 0;
+    color: #9b7700;
+    font-size: 27px;
 }
 
 .letter p {
-    font-family Georgia, serif;
-    font-size 18px;
-    line-height 1.7;
-    text-align left;
+    font-family: Georgia, serif;
+    font-size: 18px;
+    line-height: 1.7;
+    text-align: left;
 }
 
 .signature {
-    text-align right !important;
-    margin-top 30px;
-    font-style italic;
+    text-align: right !important;
+    margin-top: 30px;
+    font-style: italic;
 }
 
 #final {
-    background
+    background:
         radial-gradient(circle, #554600, #080704 70%);
 }
 
 #final h1 {
-    font-size 34px;
-    color #ffe66b;
-    text-shadow 0 0 20px rgba(255,220,70,.5);
+    font-size: 34px;
+    color: #ffe66b;
+    text-shadow: 0 0 20px rgba(255,220,70,.5);
 }
 
 #final p {
-    font-size 19px;
-    max-width 450px;
-    line-height 1.6;
-    color #ddd5bc;
+    font-size: 19px;
+    max-width: 450px;
+    line-height: 1.6;
+    color: #ddd5bc;
 }
 
 .petal {
-    position fixed;
-    top -30px;
-    font-size 18px;
-    pointer-events none;
-    animation fall linear forwards;
-    z-index 9999;
+    position: fixed;
+    top: -30px;
+    font-size: 18px;
+    pointer-events: none;
+    animation: fall linear forwards;
+    z-index: 9999;
 }
 
 @keyframes fall {
     to {
-        transform translateY(110vh) rotate(360deg);
-        opacity 0;
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
     }
 }
-style
-head
+</style>
+</head>
 
-body
+<body>
 
-!-- PANTALLA 1 --
-section id=start class=screen
-    h1🌼 Tengo algo para tih1
+<!-- PANTALLA 1 -->
+<section id="start" class="screen">
+    <h1>🌼 Tengo algo para ti</h1>
 
-    p
+    <p>
         No es exactamente lo que quería darte...
         pero lo hice especialmente para ti.
-    p
+    </p>
 
-    button onclick=startGift()
+    <button onclick="startGift()">
         Abrir 🌼
-    button
-section
+    </button>
+</section>
 
-!-- JARDÍN --
-section id=garden class=screen hidden
-    h2Para ti, amor...h2
+<!-- JARDÍN -->
+<section id="garden" class="screen hidden">
+    <h2>Para ti, amor...</h2>
 
-    div class=flower f1🌼div
-    div class=flower f2🌻div
-    div class=flower f3🌼div
-    div class=flower f4🌻div
-    div class=flower f5🌼div
+    <div class="flower f1">🌼</div>
+    <div class="flower f2">🌻</div>
+    <div class="flower f3">🌼</div>
+    <div class="flower f4">🌻</div>
+    <div class="flower f5">🌼</div>
 
-    button onclick=openLetter()
+    <button onclick="openLetter()">
         Tengo algo más para decirte...
-    button
-section
+    </button>
+</section>
 
-!-- CARTA --
-section id=message class=screen hidden
-    div class=letter
-        h2Para ti 🌼h2
+<!-- CARTA -->
+<section id="message" class="screen hidden">
+    <div class="letter">
+        <h2>Para ti 🌼</h2>
 
-        pHola, amor.p
+        <p>Hola, amor.</p>
 
-        pNo te voy a mentir, se me olvidó el día. Y me da mucha pena admitirlo, porque sé que para ti puede significar algo y porque me hubiera gustado acordarme por mi cuenta y tener algo preparado para ti.p
+        <p>No te voy a mentir, se me olvidó el día. Y me da mucha pena admitirlo, porque sé que para ti puede significar algo y porque me hubiera gustado acordarme por mi cuenta y tener algo preparado para ti.</p>
 
-        pTampoco tengo el suficiente dinero para comprarte flores, y por eso quiero pedirte muchas disculpas. Como ya te he dicho antes, al menos económicamente no siento que pueda darte todo lo que mereces. Me gustaría poder darte muchas cosas, consentirte, sorprenderte y hacerte sentir especial de todas las maneras posibles, pero ahora mismo no puedo hacerlo como quisiera.p
+        <p>Tampoco tengo el suficiente dinero para comprarte flores, y por eso quiero pedirte muchas disculpas. Como ya te he dicho antes, al menos económicamente no siento que pueda darte todo lo que mereces. Me gustaría poder darte muchas cosas, consentirte, sorprenderte y hacerte sentir especial de todas las maneras posibles, pero ahora mismo no puedo hacerlo como quisiera.</p>
 
-        pAun así, voy a intentar hacer lo más que pueda con lo que tengo. Por eso estoy haciendo esto para ti. Tal vez no sea un ramo de flores que puedas tener en tus manos, pero detrás de esto hay tiempo, cariño y muchas ganas de hacer algo bonito para ti.p
+        <p>Aun así, voy a intentar hacer lo más que pueda con lo que tengo. Por eso estoy haciendo esto para ti. Tal vez no sea un ramo de flores que puedas tener en tus manos, pero detrás de esto hay tiempo, cariño y muchas ganas de hacer algo bonito para ti.</p>
 
-        pTambién quiero pedirte perdón por todo lo que he hecho mal. Sé que no siempre he sido la persona que debería ser contigo y sé que seguramente he cometido errores que te han lastimado o te han hecho sentir mal. No quiero simplemente decirte perdón y ya. Quiero remediarlo con mis acciones, aprender de mis errores y demostrarte poco a poco que puedo hacerlo mejor.p
+        <p>También quiero pedirte perdón por todo lo que he hecho mal. Sé que no siempre he sido la persona que debería ser contigo y sé que seguramente he cometido errores que te han lastimado o te han hecho sentir mal. No quiero simplemente decirte "perdón" y ya. Quiero remediarlo con mis acciones, aprender de mis errores y demostrarte poco a poco que puedo hacerlo mejor.</p>
 
-        pQuiero que sepas que, aunque pueda equivocarme, hay algo de lo que nunca he dudado lo mucho que te amo.p
+        <p>Quiero que sepas que, aunque pueda equivocarme, hay algo de lo que nunca he dudado: lo mucho que te amo.</p>
 
-        p
-            Todos los días te amo.br
-            Todos los días despierto amándote.br
-            Todos los días me voy a dormir amándote.br
-            Todos los días quiero verte.br
-            Todos los días quiero hablar contigo.br
-            Todos los días quiero saber cómo estás.br
+        <p>
+            Todos los días te amo.<br>
+            Todos los días despierto amándote.<br>
+            Todos los días me voy a dormir amándote.<br>
+            Todos los días quiero verte.<br>
+            Todos los días quiero hablar contigo.<br>
+            Todos los días quiero saber cómo estás.<br>
             Y muchas veces, incluso cuando estoy haciendo cualquier otra cosa, terminas apareciendo en mis pensamientos.
-        p
+        </p>
 
-        p
+        <p>
             A veces simplemente quisiera poder estar contigo, abrazarte y olvidarme de todo lo demás por un rato. Quisiera poder hacerte sentir todo lo que siento por ti sin tener que intentar explicarlo con palabras, porque siento que ninguna carta puede terminar de decirlo.
-        p
+        </p>
 
-        p
+        <p>
             Quiero estar para ti cuando estés feliz, cuando estés triste, cuando tengas un mal día y cuando tengas uno de esos días en los que todo parece salir bien. Quiero poder compartir contigo mis días y también conocer cada vez más los tuyos.
-        p
+        </p>
 
-        p
+        <p>
             No quiero que pienses que porque hoy no pude darte unas flores significa que no me importas o que no pensé en ti. Al contrario. Precisamente porque me importas, no quería dejar pasar este día sin hacer absolutamente nada.
-        p
+        </p>
 
-        p
+        <p>
             Tal vez algún día pueda darte un ramo enorme de flores amarillas y recordar esta vez, cuando no tenía dinero y tuve que buscar otra manera de demostrarte lo que siento.
-        p
+        </p>
 
-        p
+        <p>
             Y cuando llegue ese día, probablemente me voy a acordar de que una vez te hice estas flores digitales porque no podía comprarte unas de verdad.
-        p
+        </p>
 
-        p
+        <p>
             Gracias por seguir aquí, por compartir tu tiempo conmigo y por dejarme formar parte de tu vida.
-        p
+        </p>
 
-        p
+        <p>
             No prometo ser perfecto, porque sé que no lo soy. Pero sí puedo prometerte que quiero seguir mejorando, quiero aprender de lo que hago mal y quiero demostrarte con hechos todo lo que significas para mí.
-        p
+        </p>
 
-        pTe amo muchísimo, amor.p
+        <p>Te amo muchísimo, amor.</p>
 
-        p
+        <p>
             Y aunque hoy no pueda darte flores de verdad, quería darte aunque fuera estas.
-        p
+        </p>
 
-        p
+        <p>
             Porque si pudiera, te daría una por cada día que he despertado pensando en ti.
-        p
+        </p>
 
-        pstrongFeliz día de las flores amarillas, mi amor.strong 🌼💛p
+        <p><strong>Feliz día de las flores amarillas, mi amor.</strong> 🌼💛</p>
 
-        pCon todo mi amor.p
+        <p>Con todo mi amor.</p>
 
-        p class=signature
-            strongCon amor tu Osito 🌼strong
-        p
-    div
+        <p class="signature">
+            <strong>Con amor tu Osito 🌼</strong>
+        </p>
+    </div>
 
-    button onclick=finalMessage()
+    <button onclick="finalMessage()">
         Una última cosa...
-    button
-section
+    </button>
+</section>
 
-!-- FINAL --
-section id=final class=screen hidden
-    h1🌼h1
-    h1No pude comprarte flores...h1
-    pasí que hice que florecieran aquí.p
-    pFeliz día de las flores amarillas 💛p
-section
+<!-- FINAL -->
+<section id="final" class="screen hidden">
+    <h1>🌼</h1>
+    <h1>No pude comprarte flores...</h1>
+    <p>así que hice que florecieran aquí.</p>
+    <p>Feliz día de las flores amarillas 💛</p>
+</section>
 
-script
+<script>
 let petalsInterval = null;
-let active = { petals false };
+let active = { petals: false };
 
- Cambia de pantalla sin que sigan corriendo animaciones anteriores
+// Cambia de pantalla sin que sigan corriendo animaciones anteriores
 function show(id) {
-    document.querySelectorAll(.screen).forEach(screen = {
-        screen.classList.add(hidden);
+    document.querySelectorAll(".screen").forEach(screen => {
+        screen.classList.add("hidden");
     });
-    document.getElementById(id).classList.remove(hidden);
+    document.getElementById(id).classList.remove("hidden");
 }
 
 function clearPetals() {
@@ -318,52 +318,52 @@ function clearPetals() {
     }
 }
 
- Pantalla inicio - jardín
+// Pantalla inicio -> jardín
 function startGift() {
     clearPetals();
     active.petals = true;
 
-    show(garden);
+    show("garden");
 
     petalsInterval = setInterval(createPetal, 700);
 }
 
- Jardín - carta
+// Jardín -> carta
 function openLetter() {
     active.petals = false;
     clearPetals();
-    show(message);
+    show("message");
 }
 
- Carta - final
+// Carta -> final
 function finalMessage() {
     active.petals = false;
     clearPetals();
 
-    show(final);
+    show("final");
 
-     Lluvia de flores
-    for (let i = 0; i  35; i++) {
-        setTimeout(createPetal, i  100);
+    // Lluvia de flores
+    for (let i = 0; i < 35; i++) {
+        setTimeout(createPetal, i * 100);
     }
 }
 
 function createPetal() {
-    const petal = document.createElement(div);
-    petal.className = petal;
+    const petal = document.createElement("div");
+    petal.className = "petal";
 
-    const flowers = [🌼, 🌻, 💛, ✿];
-    petal.innerText = flowers[Math.floor(Math.random()  flowers.length)];
+    const flowers = ["🌼", "🌻", "💛", "✿"];
+    petal.innerText = flowers[Math.floor(Math.random() * flowers.length)];
 
-    petal.style.left = Math.random()  100 + vw;
-    petal.style.animationDuration = (4 + Math.random()  5) + s;
-    petal.style.fontSize = (12 + Math.random()  15) + px;
+    petal.style.left = Math.random() * 100 + "vw";
+    petal.style.animationDuration = (4 + Math.random() * 5) + "s";
+    petal.style.fontSize = (12 + Math.random() * 15) + "px";
 
     document.body.appendChild(petal);
 
-    setTimeout(() = petal.remove(), 9000);
+    setTimeout(() => petal.remove(), 9000);
 }
-script
+</script>
 
-body
-html
+</body>
+</html>
